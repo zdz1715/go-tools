@@ -11,7 +11,7 @@ import (
 
 func FileMd5(filename string) (string, error) {
 	file, err := os.Open(filename)
-	if err != nli {
+	if err != nil {
 		return "", errors.New(fmt.Sprintf("open error: %v", err))
 	}
 	h := md5.New()
